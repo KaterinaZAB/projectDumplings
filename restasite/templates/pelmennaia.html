@@ -1,8 +1,27 @@
 {% extends 'main.html' %}
 {% block title %}<title>Пельменная</title>{% endblock %}
 {% load static %}
+{% block header %}
+<header class="header wrapper_b ">
+    <div class="logo">
+        <a href="{% url 'restasite:index' %}">
+            <img src="{% static 'img/logo_white.png'%}">
+        </a>
+    </div>
+    <div class="nav _w">
+        <a href="{% url 'restasite:index' %}">О НАС</a>
+        <a href="{% url 'restasite:pelmeni' %}">ПЕЛЬМЕНИ</a>
+        <a href="{% url 'restasite:pelmennaia' %}">ПЕЛЬМЕННЫЕ</a>
+        <a href="{% url 'restasite:contact' %}">ОТЗЫВЫ</a>
+    </div>
+    <div class="contact">
+        <img src="{% static 'img/vk_white.png'%}">
+        <img src="{% static 'img/tg_white.png'%}">
+    </div>
+</header>
+{% endblock %}
 {% block content %}
-<div class="catalog">
+<div class="catalog wrapper_b _w">
     <p class="catalog__title">ПЕЛЬМЕННЫЕ</p>
     <div class="map">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A18ecf8a6a9c643c32e920a1f6c74da7f6791eb5610f89854aabb6d080366d916&amp;width=800&amp;height=470&amp;lang=ru_RU&amp;scroll=true"></script>
@@ -19,42 +38,42 @@
     </div>
     <div class="place">
         <div class="card__name">
-            ПЕЛЬМЕННЫЙ БУТИК
+            ПЕЛЬМЕННАЯ В САДУ
         </div>
         <div class="card__text">
-            Москва, Столешников пер., д. 9, стр. 1<br>
+            Москва, Столешников пер., д. 26, стр. 1<br>
             пн-вс 10:00 — 23:00<br>
-            +7 (969) 347-35-24<br>
+            +7 (969) 347-35-23<br>
         </div>
     </div>
     <div class="place">
         <div class="card__name">
-            ПЕЛЬМЕННЫЙ БУТИК
+            ПЕЛЬМЕННАЯ НА ЗАВОДЕ
         </div>
         <div class="card__text">
-            Москва, Столешников пер., д. 9, стр. 1<br>
+            Москва, ул. Ленинская Слобода, д. 26, strEAT in Roomer<br>
             пн-вс 10:00 — 23:00<br>
-            +7 (969) 347-35-24<br>
+            +7 (985) 481-42-49<br>
         </div>
     </div>
     <div class="place">
         <div class="card__name">
-            ПЕЛЬМЕННЫЙ БУТИК
+            ПЕЛЬМЕННАЯ НА РЫНКЕ
         </div>
         <div class="card__text">
-            Москва, Столешников пер., д. 9, стр. 1<br>
+            Москва, ул. Мытная, д. 74, Даниловский рынок<br>
             пн-вс 10:00 — 23:00<br>
-            +7 (969) 347-35-24<br>
+            +7 (499) 399-31-23<br>
         </div>
     </div>
     <div class="place">
         <div class="card__name">
-            ПЕЛЬМЕННЫЙ БУТИК
+            НОВАЯ ПЕЛЬМЕННАЯ В СТАРОМ ГОРОДЕ
         </div>
         <div class="card__text">
-            Москва, Столешников пер., д. 9, стр. 1<br>
-            пн-вс 10:00 — 23:00<br>
-            +7 (969) 347-35-24<br>
+            Москва, ул. Маросейка, д. 9/2, стр. 1<br>
+            круглосуточно<br>
+            +7 (926) 424-40-22<br>
         </div>
     </div>
 </div>

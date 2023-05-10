@@ -170,8 +170,8 @@
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0.04em;
-    margin-top:25px;
-    margin-bottom: 45px;
+    padding-top:25px;
+    padding-bottom: 45px;
 }
 .card__button {
     position: absolute;
@@ -233,7 +233,11 @@
 nav ul li{
     display: inline-block;
     padding: 10px 40px 10px 0;
+}
+nav ul li a{
     cursor: pointer;
+    text-decoration:none;
+    color:black;
 }
 .text_CHI{
     color:rgb(208, 145, 0);

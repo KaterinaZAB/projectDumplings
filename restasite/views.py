@@ -4,25 +4,33 @@ from django.template.loader import get_template
 
 from restasite.forms import contact_form
 from restasite.models import menu_item
-# контроллер view в mvc model
-
 # Create your views here.
 
-def pelmeni(request):
-    menu_chi = menu_item.objects.filter(type__exact='CHI').order_by('?')[:6]
-    menu_bef = menu_item.objects.filter(type__exact='BEF').order_by('?')[:6]
-    menu_veg = menu_item.objects.filter(type__exact='VEG').order_by('?')[:6]
+def pelmeni(request, category=None):
+    # menu_chi = menu_item.objects.filter(type__exact='CHI').order_by('?')[:6]
+    # menu_bef = menu_item.objects.filter(type__exact='BEF').order_by('?')[:6]
+    # menu_veg = menu_item.objects.filter(type__exact='VEG').order_by('?')[:6]
+
+    menu = menu_item.objects.all().order_by('type')
+
+    if category:
+        menu = menu_item.objects.filter(type__exact=category)
+
+    print(menu)
+
     # словарь фильтров
     context = {
-        'menu_chi': menu_chi,
-        'menu_bef': menu_bef,
-        'menu_veg': menu_veg
+        # 'menu_chi': menu_chi,
+        # 'menu_bef': menu_bef,
+        # 'menu_veg': menu_veg,
+        'menu': menu
     }
     return render(
         request,
         'pelmeni.html',
         context=context
     )
+
 def pelmennaia(request):
     return render(
         request,

@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     {% block title %}<title>Пельмени</title>{% endblock %}
     {% load static %}
-<!--    <script src="{% static 'script.js'%}"></script>-->
     <link rel="stylesheet" href="{% static 'style.css'%}">
 </head>
 <body>
 <div class="wrapper">
+    {% block header %}
         <header class="header">
             <div class="logo">
-                <a href="{% url 'index' %}">
+                <a href="{% url 'restasite:index' %}">
                     <img src="{% static 'img/logo.png'%}">
                 </a>
             </div>
             <div class="nav _b">
-                <a href="{% url 'index' %}">О НАС</a>
-                <a href="{% url 'pelmeni' %}">ПЕЛЬМЕНИ</a>
-                <a href="{% url 'pelmennaia' %}">ПЕЛЬМЕННЫЕ</a>
-                <a href="{% url 'contact' %}">КОНТАКТЫ</a>
+                <a href="{% url 'restasite:index' %}">О НАС</a>
+                <a href="{% url 'restasite:pelmeni' %}">ПЕЛЬМЕНИ</a>
+                <a href="{% url 'restasite:pelmennaia' %}">ПЕЛЬМЕННЫЕ</a>
+                <a href="{% url 'restasite:contact' %}">ОТЗЫВЫ</a>
             </div>
             <div class="contact">
                 <img src="{% static 'img/vk_black.png'%}">
                 <img src="{% static 'img/tg_black.png'%}">
             </div>
         </header>
+    {% endblock %}
         <div class="main">
             <div class="main_content">
                 {% block content %} {% endblock %}
@@ -42,7 +43,7 @@
                         <a href="#">ДОСТАВКА</a>
                     </div>
                     <div class="footer_nav__item">
-                        <a href="{% url 'index' %}">ПЕЛЬМЕНИ</a>
+                        <a href="{% url 'restasite:index' %}">ПЕЛЬМЕНИ</a>
                         <a href="#">ПЕЛЬМЕННЫЕ</a>
                     </div>
                     <div class="footer_nav__item">

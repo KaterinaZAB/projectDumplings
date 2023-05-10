@@ -1,79 +1,43 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block content %}
-<div class="filter__pel">
-    <div class="title__pel">
-        <p>ПЕЛЬМЕНИ</p>
+    <div class="filter__pel">
+        <div class="title__pel">
+            <p>ПЕЛЬМЕНИ</p>
+        </div>
+        <nav class="filter">
+            <ul>
+                <li data-f="ALL">
+                    <a href="{% url 'restasite:pelmeni' %}"><b>Все виды</b></a>
+                </li>
+                <li data-f="CHI" class="text_CHI">
+                    <a href="{% url 'restasite:pelmeni' category='CHI' %}">Куриные </a>
+                </li>
+                <li data-f="BEF" class="text_BEF">
+                   <a  href="{% url 'restasite:pelmeni' category='BEF' %}">Говяжьи </a>
+                </li>
+                <li data-f="VEG" class="text_VEG">
+                    <a href="{% url 'restasite:pelmeni' category='VEG' %}">Веганские </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <nav class="filter">
-        <ul>
-            <li data-f="ALL">Все виды</li>
-            <li data-f="CHI" class="text_CHI">Куриные</li>
-            <li data-f="BEF" class="text_BEF">Говяжьи</li>
-            <li data-f="VEG" class="text_VEG">Веганские</li>
-        </ul>
-    </nav>
-    <script>
-        const filterBox = document.querySelectorAll('.box');
-        document.querySelector('nav').addEventListener('click',event => {
-            if(event.target.tagName!=='LI') return false;
-            let filterClass = event.target.dataset['f'];
-            console.log(filterClass);
-            console.log(document.querySelectorAll('.box'));
-            filterBox.forEach( elem => {
-                console.log(elem);
-                elem.classList.remove('hide');
-                if(!elem.classList.contains(filterClass) && filterClass!=='ALL'){
-                    elem.classList.add('hide');
-                }
-            });
-        });
-    </script>
-</div>
-<div class="main_catalog">
-   <div class="catalog_pelmenei">
-       {%for item in menu_chi%}
-            <div class="box {{item.type}}">
-                <div class="card__img_pel">
-                    <img src="{{MEDIA_URL}}{{item.image.url}}" alt="{{item.title}}">
-                </div>
-                <div class="card__name text_CHI">{{item.title}}</div>
-                <div class="card__text">{{item.description}}</div>
-                <div class="card__button">
-                    <div class="button">
-                        <div class="button_text">В КОРЗИНУ</div>
+    <div class="main_catalog">
+        <div class="catalog_pelmenei">
+            {% for item in menu %}
+                <div class="box {{ item.type }}">
+                    <div class="card__img_pel">
+                        <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                    </div>
+                    <div class="card__name text_CHI">{{ item.title }}</div>
+                    <div class="card__text">{{ item.description }}</div>
+                    <div class="card__button">
+                        <div class="button">
+                            <div class="button_text">В КОРЗИНУ</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
-        {%for item in menu_bef%}
-        <div class="box {{item.type}}">
-            <div class="card__img_pel">
-                <img src="{{MEDIA_URL}}{{item.image.url}}" alt="{{item.title}}">
-            </div>
-            <div class="card__name text_BEF">{{item.title}}</div>
-            <div class="card__text">{{item.description}}</div>
-            <div class="card__button">
-                <div class="button">
-                    <div class="button_text">В КОРЗИНУ</div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-        {%for item in menu_veg%}
-        <div class="box {{item.type}}">
-            <div class="card__img_pel">
-                <img src="{{MEDIA_URL}}{{item.image.url}}" alt="{{item.title}}">
-            </div>
-            <div class="card__name text_VEG">{{item.title}}</div>
-            <div class="card__text">{{item.description}}</div>
-            <div class="card__button">
-                <div class="button">
-                    <div class="button_text">В КОРЗИНУ</div>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
     </div>
-</div>
 {% endblock %}
