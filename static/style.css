@@ -1,0 +1,356 @@
+/* общие */
+*{
+    padding:0;
+    margin:0;
+}
+.wrapper {
+    background-color: #F5F5F5;
+    font-family: 'Raleway', sans-serif;
+}
+.wrapper_b {
+    background-color: #131515;
+    font-family: 'Raleway', sans-serif;
+}
+._b{
+    color: #131515;
+}
+._w{
+    color: #F5F5F5;
+}
+._w a{
+    color: #F5F5F5;
+}
+._b a{
+    color: #131515;
+}
+/* --------общие */
+/* верняя часть */
+.header {
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+}
+.logo {
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+.nav a{
+    text-decoration:none;
+    margin-right:40px;
+}
+.contact img{
+    padding-right: 25px;
+}
+/* ------------ верхняя часть */
+
+/* главная страница */
+.main {
+}
+.main_content {
+}
+.main_content__image{
+    background-image: URL(img/main.png);
+    background-repeat: no-repeat;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+    align-items: center;
+    padding-left: 14%;
+}
+.main_content__image img{
+    width: 100%;
+    height: 1000px;
+}
+.image_block{
+    padding: 200px 0;
+}
+.image_text {
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 82px;
+    letter-spacing: 0.04em;
+    margin-bottom: 25px;
+    color:white;
+}
+.image_text span{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.04em;
+}
+.arrow {
+    width: 130px;
+    height: 55px;
+}
+._button {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #131515;
+    color: #F5F5F5;
+    text-align: center;
+}
+    ._button_text{
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: 0.04em;
+    }
+
+.slaider_button {
+
+}
+/* --------------главная страница */
+
+/* каталог пельменей */
+.main_catalog {
+    padding-bottom: 210px;
+}
+.catalog {
+}
+.title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    letter-spacing: 0.04em;
+    padding: 100px 45px;
+    padding-left: 14%;
+}
+.catalog__title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.04em;
+    padding: 100px 45px;
+}
+ .catalog__menu {
+    display: flex;
+    justify-content: center;
+} 
+.cards {
+}
+.card {
+    position: relative;
+    height: 450px;
+}
+.card__img img {
+    width:270px;
+    height:270px;
+}
+.card__img_pel img {
+    width:270;
+    height: 260px;
+}
+.card__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    margin-bottom: 5px;
+}
+.card__price {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+    margin-bottom: 30px;
+}
+.card__text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    margin-top:25px;
+    margin-bottom: 45px;
+}
+.card__button {
+    position: absolute;
+    bottom: 35px;
+}
+.button {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #131515;
+    color: #F5F5F5;
+    text-align: center;
+    border-radius: 32px;
+}
+    .button_text{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.04em;
+    }
+/* ---------каталог пельменей */
+
+/*  */
+
+
+.place{
+    padding-left: 14%;
+}
+
+
+.map{
+    position: absolute;
+    right: 40px;
+
+}
+.map iframe{
+    border-radius: 235px;
+}
+
+/* страница пельмени */
+.filter{
+    display: flex;
+    justify-content: center;
+}
+.filter__pel{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 56px;
+    align-items: center;
+    letter-spacing: 0.04em;
+    padding: 100px 45px;
+}
+.title__pel{
+    font-size: 48px;
+    padding-bottom: 50px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 10px 40px 10px 0;
+    cursor: pointer;
+}
+.text_CHI{
+    color:rgb(208, 145, 0);
+}
+.text_BEF{
+    color: rgb(80, 52, 0);
+}
+.text_VEG{
+    color: rgb(0, 149, 50);
+}
+.box{
+    position: relative;
+    padding: 20px 0;
+    display: inline-block;
+    margin-bottom: 16px;
+    float: left;
+    break-inside: avoid;
+    height: 660px;
+    width: 400px;
+}
+.box:last-child {
+  margin-bottom: 0;
+}
+
+.hide{
+    opacity: 1;
+    display: none;
+}
+.main_catalog{
+    display: flex;
+    justify-content: center;
+}
+.catalog_pelmenei{
+    display: inline-block;
+    width: 800px;
+    column-count: 2;
+}
+/* -----------------страница пельмени */
+
+.footer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #131515;
+    height: 185px;
+    padding: 50px 0;
+}
+.logo {
+}
+.footer_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer_nav__item {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+}
+.footer_nav__item a{
+    text-decoration: none;
+    color: #F5F5F5;
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+}
+.contact {
+}
+/* оставление отзыва */
+.connect{
+    align-items: center;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+.connect input, .connect textarea{
+    background-color: #F5F5F5;
+    border: 1px solid #131515;
+    height: 60px;
+    width: 500px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.connect input::placeholder, .connect textarea::placeholder{
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+#send {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #131515;
+    color: #F5F5F5;
+    text-align: center;
+}
+    #send ::placeholder{
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: 0.04em;
+    }
+.errors{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert_info{
+    font-size: 20px;
+    color: green;
+    padding: 20px 30px;
+    border: 1px solid green;
+    background-color: #9bc59b;
+}
+/*------ оставление отзыва */

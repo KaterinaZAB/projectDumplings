@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>Пельмени</title>{% endblock %}
+    {% load static %}
+<!--    <script src="{% static 'script.js'%}"></script>-->
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+<div class="wrapper">
+        <header class="header">
+            <div class="logo">
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'img/logo.png'%}">
+                </a>
+            </div>
+            <div class="nav _b">
+                <a href="{% url 'index' %}">О НАС</a>
+                <a href="{% url 'pelmeni' %}">ПЕЛЬМЕНИ</a>
+                <a href="{% url 'pelmennaia' %}">ПЕЛЬМЕННЫЕ</a>
+                <a href="{% url 'contact' %}">КОНТАКТЫ</a>
+            </div>
+            <div class="contact">
+                <img src="{% static 'img/vk_black.png'%}">
+                <img src="{% static 'img/tg_black.png'%}">
+            </div>
+        </header>
+        <div class="main">
+            <div class="main_content">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer_content">
+                <div class="logo">
+                    <img src="{% static 'img/logo_white.png'%}">
+                </div>
+                <div class="footer_nav">
+                    <div class="footer_nav__item">
+                        <a href="#">О НАС</a>
+                        <a href="#">ДОСТАВКА</a>
+                    </div>
+                    <div class="footer_nav__item">
+                        <a href="{% url 'index' %}">ПЕЛЬМЕНИ</a>
+                        <a href="#">ПЕЛЬМЕННЫЕ</a>
+                    </div>
+                    <div class="footer_nav__item">
+                        <a href="#">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ САЙТА</a>
+                        <a href="#">ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</a>
+                        <a href="#">УСЛОВИЯ ЗАКАЗА И ДОСТАВКИ</a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <img src="{% static 'img/vk_white.png'%}">
+                    <img src="{% static 'img/tg_white.png'%}">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+</html>
